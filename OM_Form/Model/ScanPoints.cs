@@ -231,6 +231,9 @@ namespace ortomachine.Model
                 }
             }
             image.Save(form1.SavePath+"\\"+"surface.png");
+            StreamWriter sw = new StreamWriter(form1.SavePath + "\\" + "surface.xyz");
+            sw.WriteLine("{0} {1} {2} {3}",X0.ToString(), Z0.ToString(), rastersize.ToString(), offset.ToString());
+            sw.Close();
             return image.ToBitmap();
 
 
