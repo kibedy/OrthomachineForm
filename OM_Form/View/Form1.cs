@@ -20,7 +20,7 @@ namespace OM_Form
         public string filename;
         Thread thread;
         public float offset, rastersize;
-        public string SavePath = "";
+        public string SavePath;
 
 
 
@@ -31,6 +31,8 @@ namespace OM_Form
         {
             InitializeComponent();
             openToolStripMenuItem.Enabled=false;
+            SavePath = null;
+            ;
         }
 
         private void FileStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,27 +52,32 @@ namespace OM_Form
             
             if (result == DialogResult.OK)
             {
-                
-                SavePath = folderBrowserDialog1.SelectedPath;
-                if (SavePath == "")
+                                
+                if (SavePath!=null)
                 {
                     if (MessageBox.Show("Close this and create new Project?", "Create new project?", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
                         SavePath = folderBrowserDialog1.SelectedPath;
+                        openToolStripMenuItem.Enabled = true;
                     }
 
                 }
                 else
+                {
                     SavePath = folderBrowserDialog1.SelectedPath;
+                    openToolStripMenuItem.Enabled = true;
+                }
             }
-            openToolStripMenuItem.Enabled = true;
+            ;
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-    
+        }
 
-    private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
     {
         OpenFileDialog ofd = new OpenFileDialog();
         ofd.DefaultExt = ".asc";
