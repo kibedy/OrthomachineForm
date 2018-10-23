@@ -42,6 +42,7 @@
             this.offsetbox.Name = "offsetbox";
             this.offsetbox.Size = new System.Drawing.Size(124, 20);
             this.offsetbox.TabIndex = 0;
+            this.offsetbox.Text = "1";
             // 
             // rasterbox
             // 
@@ -49,6 +50,7 @@
             this.rasterbox.Name = "rasterbox";
             this.rasterbox.Size = new System.Drawing.Size(124, 20);
             this.rasterbox.TabIndex = 1;
+            this.rasterbox.Text = "0.02";
             // 
             // label1
             // 

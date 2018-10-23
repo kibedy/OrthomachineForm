@@ -1,4 +1,6 @@
-﻿namespace OM_Form
+﻿using System.ComponentModel;
+
+namespace OM_Form
 {
     partial class Form1
     {
@@ -6,7 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        //public System.Windows.Forms.ProgressBar progressBar1;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,6 +21,9 @@
             }
             base.Dispose(disposing);
         }
+
+
+       
 
         #region Windows Form Designer generated code
 
@@ -35,6 +40,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            backgroundWorker1 = new BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +89,7 @@
             this.listBox1.Location = new System.Drawing.Point(0, 29);
             this.listBox1.MinimumSize = new System.Drawing.Size(60, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(100, 537);
+            this.listBox1.Size = new System.Drawing.Size(100, 498);
             this.listBox1.TabIndex = 2;
             // 
             // panel1
@@ -106,11 +113,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.progressBar1.Location = new System.Drawing.Point(0, 526);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 28);
+            this.progressBar1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 561);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip1);
@@ -138,6 +154,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem newProjectToolStripMenuItem;
+        public System.Windows.Forms.ProgressBar progressBar1;
+        //public BackgroundWorker backgroundWorker1;
     }
 }
 
